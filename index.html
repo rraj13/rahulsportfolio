@@ -9,11 +9,156 @@
     <title>Rahul Raj</title>
 
     <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
 </head>
 
 <body>
+
+    <div class="main-div body-wrapper fade-in">
+        
+        <div class="wrapper">
+            <div class="hello wrapper-content">
+                <div class="header">
+                    <p id="test">Hi. I'm Rahul.</p>
+                    <p>I build <span>web apps.</span></p>
+                </div>
+                <hr>
+                <div class="wrapper-content">
+                    <i class="fas fa-phone svg" id="contact"><span class="tooltip" id="phone-tip">Contact Me</span></i>
+                    <a href="https://github.com/rraj13"><i class="fab fa-github svg"><span class="tooltip" id="github-tip">Github</span></i></a>
+                    <a href="https://www.linkedin.com/in/rahulrajucla/"><i class="fab fa-linkedin svg"><span class="tooltip" id="linkedin-tip">LinkedIn</span></i></a>
+                    <i class="fas fa-file svg" id="resume"><span class="tooltip" id="resume-tip">My Resume</span></i>
+                    <i class="fas fa-briefcase svg" id="portfolio"><span class="tooltip" id="portfolio-tip">Portfolio</span></i>
+                    <i class="far fa-smile svg" id="about-me"><span class="tooltip" id="aboutme-tip">About Me</span></i>  
+                 </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content hidden">
+
+        <div class="about-me hidden">
+            <p class="para-text">Hi. I'm Rahul.</p>
+            <p class="para-text">I'm an Economics graduate from UCLA and a certified Full Stack Web Developer from Case Western Reserve University's Coding Bootcamp.</p>
+            <p class="para-text">I am based in Los Angeles and am looking for positions in software or web development to take my programming skills to the next level. I created this site to showcase some of my personal projects as well as share my contact information.
+            <p class="para-text">Feel free to take a look at my collection of apps, message me about some of my current work, and check out links to my Github in case you see a direct application to what you're working on!</p>
+            <p class="para-text"><span>Technologies:</span>
+            <p class="para-text">Frontend:</p>
+            <p class="para-text">HTML5, CSS3, Bootstrap, Javascript and JQuery</p>
+            <p class="para-text">Backend:</p>
+            <p class="para-text">MongoDB, Firebase, mySQL, Node.js, Express, React, and Java</p>
+            <p class="para-text">Developer Tools:</p>
+            <p class="para-text">Git, Github, Command Line, and the Console</p>
+        </div>
+    
+        <div class="portfolio hidden">
+            <div class="portfolio-grid">
+                <div class="section" id="frontend-section"><span>Frontend Projects</span>
+                    <div class="portfolio-item" id="jsCalc">
+                        <img src="images/calculatorJS.png" alt="JavaScript Calculator Screenshot">
+                        <p class="para-text">JavaScript Calculator</p>
+                        <div class="tech-stack-div">
+                            <div class="tech-stack">HTML5</div>
+                            <div class="tech-stack">CSS3</div>
+                            <div class="tech-stack">JavaScript</div>
+                            <div class="tech-stack">JQuery</div> 
+                        </div>
+                        <p class="para-text">A four function calculator built with JavaScript and JQuery, capable of handling order of operations functionality. Design inspired by Apple iOS calculator.</p>
+                        <button class="demo-go"><a href="https://rraj13.github.io/JavaScript-Calculator/">Live Demo</a></button>
+                        <button class="github-go"><a href="https://github.com/rraj13/JavaScript-Calculator">Github Repo</button></a>    
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/NBA-Trivia.png" alt="NBA Trivia Screenshot">
+                        <p class="para-text">NBA Trivia App</p>
+                        <div class="tech-stack-div">
+                            <div class="tech-stack">HTML5</div>
+                            <div class="tech-stack">CSS3</div>
+                            <div class="tech-stack">JavaScript</div>
+                            <div class="tech-stack">JQuery</div> 
+                        </div>
+                        <p class="para-text">Test your basketball knowledge with this NBA-inspired Trivia Game!</p>
+                        <button class="demo-go"><a href="https://rraj13.github.io/NBA-Trivia-Game/">Live Demo</a></button>
+                        <button class="github-go"><a href="https://github.com/rraj13/NBA-Trivia-Game">Github Repo</button></a>
+                    </div>
+                </div>
+
+                <div class="section"><span>Backend Projects</span>
+                    <div class="portfolio-item" id="liri-app">
+                        <img src="images/liri-node-app-1.png" alt="LIRI Node App Screenshot">
+                        <p class="para-text">Music-Movie-Node Bot
+                        <div class="tech-stack-div">
+                            <div class="tech-stack">Node.js</div>
+                            <div class="tech-stack">.env</div>
+                            <div class="tech-stack">OMDB Movie Database API</div>
+                            <div class="tech-stack">Spotify API</div>
+                            <div class="tech-stack">BandsInTown API</div>
+                            <div class="tech-stack">Moment.js</div> 
+                        </div>
+                        <p class="para-text">A Node.js CLI application that runs specific APIs given user entered data and returns appropriate responses.</p>
+                        <button class="demo-go"><a href="https://drive.google.com/file/d/17pLkHpG4dtey6BqI2BWSirqacAe6Lg34/view">Live Demo</a></button>
+                        <button class="github-go"><a href="https://github.com/rraj13/Music-Movie-Node-Bot-LIRI">Github Repo</button></a>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-item">
+                            <img src="images/Bamazon.png" alt="Bamazon App Screenshot">
+                            <p class="para-text">Amazon NodeJS Imitator (Bamazon)
+                            <div class="tech-stack-div">
+                                <div class="tech-stack">JavaScript</div>
+                                <div class="tech-stack">Node.js</div>
+                                <div class="tech-stack">mySQL</div>
+                            </div>
+                            <p class="para-text">A Node.js CLI application that mimics an Amazon-like storefront application. A customer can purchase items, a manager can view inventory and a supervisor can view sales data, to name a few of the functions. All data is integrated and persistent with mySQL.</p>
+                            <button class="demo-go"><a href="https://youtu.be/1KgOd0wJ4H0">Live Demo</a></button>
+                            <button class="github-go"><a href="https://github.com/rraj13/Amazon-NodeJS-Imitator-Bamazon">Github Repo</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section"><span>Fullstack Projects</span>
+                        <div class="portfolio-item" id="friendfinder">
+                            <img src="images/FriendFinder.png" alt="Friend Finder Application Screenshot">
+                            <p class="para-text">Friend Finder
+                            <div class="tech-stack-div">
+                                <div class="tech-stack">HTML5</div>
+                                <div class="tech-stack">CSS3</div>
+                                <div class="tech-stack">JavaScript</div>
+                                <div class="tech-stack">Node.js</div>
+                                <div class="tech-stack">Express</div>
+                            </div>
+                            <p class="para-text">A web application that connects users with their most compatible friend from an existing set of candidates. The application incorporates both a front end with visuals and grabbing user input and a backend with setting up express get and post routes.</p>
+                            <button class="demo-go"><a href="https://friendfinder-rahulraj.herokuapp.com/">Live Demo</a></button>
+                            <button class="github-go"><a href="https://github.com/rraj13/FriendFinder">Github Repo</a></button>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume hidden">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRH9KH4fy8OEzN-0NURPPzfUqHCZmY-3OShYYCXSXnMhtUboxCGNwxl8HDoCUuxzF4yHVjf67hBVrF5/pub?embedded=true"></iframe>
+        </div>
+            
+        <div class="contact hidden">
+            
+            <p class="para-text">Thank you so much for visitng my site!</p>
+            <p class="para-text">I would absolutely love to connect to discuss new opportunities. Please feel to reach out at any of the means below!</p>
+            
+            <div class="contact-means">
+                <p class="para-text">Phone: 310-909-6845</p>
+                <p class="para-text">Email: rraj230@gmail.com</p>
+            </div>
+
+        </div>  
+
+    </div>
+
+     
+
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

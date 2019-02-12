@@ -1,19 +1,15 @@
 body {
-    height: 100vh;
     margin: 0;
-    position: relative;
     background-color: #f6f9fc;
     font-family: 'Share Tech Mono', monospace;
 }
 
-
-
 @media only screen and (min-width: 320px){
-
 
     .main-div {
         position: absolute;
-        top: 150px;
+        top: 50%;
+        margin-top: -95px;
         -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein 2s; /* Firefox < 16 */
             -ms-animation: fadein 2s; /* Internet Explorer */
@@ -71,16 +67,16 @@ body {
     }
 
     .svg {
-        margin-right: 8px;
-        font-size: .77em;
         position: relative;
         display: inline-block;
+        margin-right: 17px;
+        margin-left: -5px;
+        font-size: .77em;
         cursor: pointer;
     }
 
     .tooltip {
-        display: none;
-        font-size: 15px;
+        font-size: 8.7px;
         font-family: "Share Tech Mono", monospace;
         font-weight: bold;
         width: 120px;
@@ -93,10 +89,7 @@ body {
         top: 100%;
         left: 50%;
         margin-left: -60px;
-    }
-
-    .svg:hover .tooltip {
-        display: block;
+        margin-right: 100px;
     }
 
     a {
@@ -161,9 +154,9 @@ body {
     }
 
     .portfolio-item {
+        position: relative;
         width: 270px;
-        display: grid;
-        grid-template-rows: auto;
+        height: 500px;
         background-color: #f6f9fc;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -178,37 +171,42 @@ body {
     }
 
     .tech-stack {
-        border: 2px solid #92eac0;
         display: inline-block;
+        border: 2px solid #92eac0;
         font-size: .85em;
         margin-bottom: 5px;
         padding: 4px;
         background-color: #fff;
     }
-
-
-    .portfolio-item a {
-        display: inline-block;
-    }
+    
 
     .demo-go {
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 10px;
         background-color: #747fe0;
         font-family: 'Share Tech Mono', monospace;
-        margin: 5px;
-        padding: 10px;
         cursor: pointer;
-        border: none;
-
+        outline: none !important;
+        border: 1px solid #747fe0;
     }
 
     .github-go {
-        background-color: #f6f9fc;
-        font-family: 'Share Tech Mono', monospace;
-        margin: 5px;
+        border: 1px solid black;
         padding: 10px;
+        position: absolute;
+        bottom: 40px;
+        left: 145px;
+        font-family: 'Share Tech Mono', monospace;
         cursor: pointer;
+        outline: none !important;
     }
 
+    #portfolio-go {
+        left: 10px;
+        bottom: 40px;
+    }
 
     .contact-method {
         font-family: 'Share Tech Mono', monospace;
@@ -217,10 +215,17 @@ body {
 
 @media screen and (min-width: 400px) {
     
+    .main-div {
+        margin-top: -99.5px;
+    }
+    
     .svg {
         font-size: 1.33em;
     }
 
+    .tooltip {
+        font-size: 10px;
+    }
     
     .portfolio-item {
         width: 320px;
@@ -233,6 +238,10 @@ body {
 }
 
 @media screen and (min-width: 740px) {
+
+    .main-div {
+        margin-top: -109.5px;
+    }
 
     .wrapper-content {
         padding: 20px;
@@ -266,19 +275,28 @@ body {
 @media screen and (min-width: 920px) {
 
     .main-div {
-       width: 500px;
-       margin-left: 27.5%;
-    }
-
-    .content {
-        margin-left: 27.5%;
+       position: fixed;
+       left: 10%;
+       margin-left: -86.2px;
     }
     
     .about-me {
+        left: 45%;
+        top: 3%;
         width: 500px;
     }
 
+    .portfolio {
+        left: 45%;
+        margin-top: 0;
+        top: 5%;
+        margin-left: -60px;
+    }
+
     .contact {
+        left: 45%;
+        top: 50%;
+        margin-top: -109.5px;
         width: 500px;
     }
 }

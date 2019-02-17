@@ -59,6 +59,30 @@ body {
     .socials {
         padding: 0 0 0 20px;
     }
+
+    a.social-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.social-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.social-link:visited {
+        color: #111;
+        text-decoration: none;
+    }
+    a.social-link:hover{
+        color: #111;
+        text-decoration: none;
+    }
+    a.social-link:active{
+        color: #111;
+        text-decoration: none;
+    }
+
     span {
         font-weight: bold;
     }
@@ -72,7 +96,7 @@ body {
     .svg {
         position: relative;
         display: inline-block;
-        margin-right: 25px;
+        margin-right: 27px;
         margin-left: -5px;
         font-size: .77em;
         cursor: pointer;

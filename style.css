@@ -47,10 +47,6 @@ body {
         to   { opacity: 1; }
     }
 
-    .wrapper {
-        width: 100%;
-    }
-
     .wrapper-content {
         padding: 20px;
         font-size: 25px;
@@ -74,10 +70,12 @@ body {
         color: #111;
         text-decoration: none;
     }
+    
     a.social-link:hover{
         color: #111;
         text-decoration: none;
     }
+
     a.social-link:active{
         color: #111;
         text-decoration: none;
@@ -136,16 +134,11 @@ body {
         top: 130px;
         margin: 25px;
     }
+
     .portfolio {
         position: absolute;
         top: 130px;
-        margin: 25px;
-    }
-
-    .resume {
-        position: absolute;
-        top: 130px;
-        margin: 25px;
+        width: 100%;
     }
 
     .contact {
@@ -158,38 +151,41 @@ body {
         margin: 10px;
         line-height: 1.2;
     }
-
-    /* styling porfolio-grid */
+ 
+/* styling porfolio-grid */
 
     .portfolio-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-gap: 30px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-top: 30px;
     }
 
     .section {
-        margin-top: 10px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-gap: 30px;
-    }
-
-    .section span {
-        text-decoration: underline;
+        grid-row-gap: 30px;
+        justify-items: center;
     }
 
     .portfolio-item {
-        position: relative;
-        width: 270px;
+        width: 90%;
         height: 500px;
         background-color: #f6f9fc;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: left;
+        position: relative;
     }
 
     img {
-        width: 270px;
+        width: 100%;
         height: 150px;
     }
 
@@ -205,7 +201,31 @@ body {
         padding: 4px;
         background-color: #fff;
     }
-    
+
+    a.demo-go-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.demo-go-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.demo-go-link:visited {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.demo-go-link:hover{
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.demo-go-link:active{
+        color: #111;
+        text-decoration: none;
+    }
 
     .demo-go {
         position: absolute;
@@ -219,12 +239,37 @@ body {
         border: 1px solid #747fe0;
     }
 
+    a.github-go-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.github-go-link:link {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.github-go-link:visited {
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.github-go-link:hover{
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.github-go-link:active{
+        color: #111;
+        text-decoration: none;
+    }
+
     .github-go {
         border: 1px solid black;
         padding: 10px;
         position: absolute;
         bottom: 40px;
-        left: 145px;
+        left: 130px;
         font-family: 'Share Tech Mono', monospace;
         cursor: pointer;
         outline: none !important;
@@ -233,6 +278,14 @@ body {
     #portfolio-go {
         left: 10px;
         bottom: 40px;
+    }
+    
+    .bamazon-go {
+        bottom: 15px;
+    }
+
+    .friend-go {
+        bottom: 15px;
     }
 
     .contact-method {
@@ -255,11 +308,7 @@ body {
     }
     
     .portfolio-item {
-        width: 320px;
-    }
-    
-    img {
-        width: 320px;
+        width: 60%;
     }
 
 }
@@ -281,6 +330,11 @@ body {
 
     .section {
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+    }
+
+    .portfolio-item {
+        width: 85%;
     }
 
     #jsCalc {
@@ -297,6 +351,10 @@ body {
         grid-column-start: 1;
         grid-column-end: 2;
     }
+
+    .friend-go {
+        bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 920px) {
@@ -309,15 +367,25 @@ body {
     
     .about-me {
         left: 45%;
-        top: 3%;
+        top: 10%;
         width: 500px;
     }
 
     .portfolio {
-        left: 45%;
+        left: 48%;
         margin-top: 0;
         top: 5%;
         margin-left: -60px;
+        width: 50%;
+        text-align: center;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .section {
+        grid-column-gap: 40px;
     }
 
     .contact {

@@ -56,6 +56,9 @@ body {
         font-size: 25px;
     }
 
+    .socials {
+        padding: 0 0 0 20px;
+    }
     span {
         font-weight: bold;
     }
@@ -69,7 +72,7 @@ body {
     .svg {
         position: relative;
         display: inline-block;
-        margin-right: 17px;
+        margin-right: 25px;
         margin-left: -5px;
         font-size: .77em;
         cursor: pointer;

@@ -4,7 +4,33 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
+.dark-mode-body {
+    background-color: #111;
+}
+
+.dark-mode-text {
+    color: #fff;
+}
+
+.dark-mode-hr {
+    background-color: rgb(170, 170, 170);
+}
+
+.dark-mode-tooltip {
+    color: rgb(170, 170, 170);
+}
+
 @media only screen and (min-width: 320px){
+
+    .dark-mode-div {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
 
     .main-div {
         position: absolute;
@@ -308,12 +334,12 @@ body {
     }
     
     .portfolio-item {
-        width: 60%;
+        width: 70%;
     }
 
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 768px) {
 
     .main-div {
         margin-top: -109.5px;

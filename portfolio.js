@@ -121,6 +121,8 @@ $(document).ready(function() {
     });
 
     $(document.body).on("click", ".dark-mode-div", function() {
+
+        //changing font-awesome icon
         
         if ($("#dark-mode-icon").css("color") === "rgb(0, 0, 0)") {
             $("#dark-mode-icon").css("color", "rgb(255, 255, 255)");
@@ -128,12 +130,15 @@ $(document).ready(function() {
             $("#dark-mode-icon").css("color", "rgb(0, 0, 0)");
         }
 
+        //changing tooltip colors
+
         if ($(".tooltip").css("color") === "rgb(116, 127, 224)") {
             $(".tooltip").css("color", "rgb(170, 170, 170)");
         } else {
             $(".tooltip").css("color", "rgb(116, 127, 224)");
         }
 
+        //changing all portfolio-item properties
         if ($(".portfolio-item").css("background-color") === "rgb(246, 249, 252)") {
             $(".portfolio-item").css("background-color", "rgb(0, 0, 0)");
             $(".portfolio-item").css("border", "1px solid #fff");

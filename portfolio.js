@@ -26,7 +26,7 @@ $(document).ready(function() {
     $(document.body).on('click', '#about-me', function() {
         clicked = true;
 
-        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".about-me").hasClass("hidden") || !$(".about-me").hasClass("hidden"))) {
+        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".about-me").hasClass("hidden"))) {
             moveMainUp();
             if (!$(".portfolio").hasClass("hidden")) {
                 $(".portfolio").addClass("hidden");
@@ -174,10 +174,6 @@ $(document).ready(function() {
     // all dark-mode styling
 
     $(document.body).on("click", ".dark-mode-div", function() {
-
-        //changing font 
-
-        $("body").toggleClass("dark-mode-font");
 
         //changing font-awesome icon
         

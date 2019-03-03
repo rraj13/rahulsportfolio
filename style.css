@@ -24,8 +24,8 @@ body {
     color: rgb(170, 170, 170);
 }
 
-.show-content {
-    display: block;
+.hidden {
+    display: none;
 }
 
 @media only screen and (min-width: 320px){
@@ -128,9 +128,9 @@ body {
     .svg {
         position: relative;
         display: inline-block;
-        margin-right: 27px;
-        margin-left: -5px;
-        font-size: .77em;
+        margin-right: 15px;
+        margin-left: -10px;
+        font-size: 1.5em;
         cursor: pointer;
     }
 
@@ -157,10 +157,6 @@ body {
 
     a:visited {
         color:black;
-    }
-
-    .hidden {
-        display: none;
     }
 
     .about-me {
@@ -327,14 +323,17 @@ body {
     }
 }
 
+@media screen and (min-width: 375px) {
+    .svg {
+        margin-right: 25px;
+        margin-left: -10px;
+    }
+}
+
 @media screen and (min-width: 400px) {
     
     .main-div {
         margin-top: -99.5px;
-    }
-    
-    .svg {
-        font-size: 1.33em;
     }
 
     .tooltip {
@@ -427,5 +426,12 @@ body {
         top: 50%;
         margin-top: -109.5px;
         width: 500px;
+    }
+
+    .svg {
+        padding-top: 0px;
+        margin-right: 15px;
+        margin-left: -5px;
+        font-size: 1em;
     }
 }

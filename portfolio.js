@@ -21,106 +21,163 @@ $(document).ready(function() {
 
     }
 
+    // dynamic styling for "about-me" section
+
     $(document.body).on('click', '#about-me', function() {
         clicked = true;
 
-        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".about-me").attr("style") === "display: none;" || $(".about-me").attr("style") === undefined)) {
+        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".about-me").hasClass("hidden") || !$(".about-me").hasClass("hidden"))) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".contact").fadeOut();
-            $(".about-me").fadeIn();
-        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && ($(".about-me").attr("style") === "display: none;" || $(".about-me").attr("style") === undefined)) {
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".about-me").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && ($(".about-me").hasClass("hidden"))) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".contact").fadeOut();
-            $(".about-me").fadeIn();
-        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && ($(".about-me").attr("style") === "display: none;" || $(".about-me").attr("style") === undefined)) {
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".about-me").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && ($(".about-me").hasClass("hidden"))) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".contact").fadeOut();
-            $(".about-me").fadeIn();
-        } else if (clicked && window.innerWidth >= 920 && ($(".about-me").attr("style") === "display: none;" || $(".about-me").attr("style") === undefined)) {
-            $(".header").html("<p>" + "Nav" + "</p>");        
-            $(".portfolio").fadeOut();
-            $(".contact").fadeOut();
-            $(".about-me").fadeIn();
-        } else if ($(".about-me").attr("style") === "display: block;" && window.innerWidth < 920) {
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".about-me").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 920 && $(".about-me").hasClass("hidden")) {
+            $(".header").html("<p>" + "Nav" + "</p>");
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".about-me").removeClass("hidden");
+        } else if (!$(".about-me").hasClass("hidden") && window.innerWidth < 920) {
             moveMainDown();
-            $(".about-me").fadeOut();
-        } else if ($(".about-me").attr("style") === "display: block;" && window.innerWidth >= 920) {
-            resetMainText()
-            $(".about-me").fadeOut();
+            $(".about-me").addClass("hidden");
+        } else if (!$(".about-me").hasClass("hidden") && window.innerWidth >= 920) {
+            resetMainText();
+            $(".about-me").addClass("hidden");
         }
-
     });
+
+    //dynamic styling for "portfolio" section
 
     $(document.body).on('click', '#portfolio', function () {
         clicked = true;
     
-        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".portfolio").attr("style") === "display: none;" || $(".portfolio").attr("style") === undefined)) {
+        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && $(".portfolio").hasClass("hidden")) {
             moveMainUp();
-            $(".about-me").fadeOut();
-            $(".contact").fadeOut();
-            $(".portfolio").fadeIn();
-        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && ($(".portfolio").attr("style") === "display: none;" || $(".portfolio").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".portfolio").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && $(".portfolio").hasClass("hidden")) {
             moveMainUp();
-            $(".about-me").fadeOut();
-            $(".contact").fadeOut();
-            $(".portfolio").fadeIn();
-        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && ($(".portfolio").attr("style") === "display: none;" || $(".portfolio").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".portfolio").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && $(".portfolio").hasClass("hidden")) {
             moveMainUp();
-            $(".about-me").fadeOut();
-            $(".contact").fadeOut();
-            $(".portfolio").fadeIn();
-        } else if (clicked && window.innerWidth > 920 && ($(".portfolio").attr("style") === "display: none;" || $(".portfolio").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".portfolio").removeClass("hidden");
+        } else if (clicked && window.innerWidth > 920 && $(".portfolio").hasClass("hidden")) {
             $(".header").html("<p>" + "Nav" + "</p>");
-            $(".about-me").fadeOut();
-            $(".contact").fadeOut();
-            $(".portfolio").fadeIn();
-        } else if ($(".portfolio").attr("style") === "display: block;" && window.innerWidth < 920) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".contact").hasClass("hidden")) {
+                $(".contact").addClass("hidden");
+            }
+            $(".portfolio").removeClass("hidden");
+        } else if (!$(".portfolio").hasClass("hidden") && window.innerWidth < 920) {
             moveMainDown();
-            $(".portfolio").fadeOut();
-        } else if ($(".portfolio").attr("style") === "display: block;" && window.innerWidth >= 920) {
-            resetMainText()
-            $(".portfolio").fadeOut();
+            $(".portfolio").addClass("hidden");
+        } else if (!$(".portfolio").hasClass("hidden") && window.innerWidth > 920) {
+            resetMainText();
+            $(".portfolio").addClass("hidden");
         } 
     });
 
+    // dynamic styling for "contact" section styling
 
     $(document.body).on('click', '#contact', function () {
         clicked = true;
-
-        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && ($(".contact").attr("style") === "display: none;" || $(".contact").attr("style") === undefined)) {
+    
+        if (clicked && window.innerWidth >= 320 && window.innerWidth < 400 && $(".contact").hasClass("hidden")) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".about-me").fadeOut();
-            $(".contact").fadeIn();
-        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && ($(".contact").attr("style") === "display: none;" || $(".contact").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            $(".contact").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 400 && window.innerWidth < 740 && $(".contact").hasClass("hidden")) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".about-me").fadeOut();
-            $(".contact").fadeIn();
-        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && ($(".contact").attr("style") === "display: none;" || $(".contact").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            $(".contact").removeClass("hidden");
+        } else if (clicked && window.innerWidth >= 740 && window.innerWidth < 920 && $(".contact").hasClass("hidden")) {
             moveMainUp();
-            $(".portfolio").fadeOut();
-            $(".about-me").fadeOut();
-            $(".contact").fadeIn();
-        } else if (clicked && window.innerWidth >= 920 && ($(".contact").attr("style") === "display: none;" || $(".contact").attr("style") === undefined)) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            $(".contact").removeClass("hidden");
+        } else if (clicked && window.innerWidth > 920 && $(".contact").hasClass("hidden")) {
             $(".header").html("<p>" + "Nav" + "</p>");
-            $(".portfolio").fadeOut();
-            $(".about-me").fadeOut();
-            $(".contact").fadeIn();
-        } else if ($(".contact").attr("style") === "display: block;" && window.innerWidth < 920) {
+            if (!$(".about-me").hasClass("hidden")) {
+                $(".about-me").addClass("hidden");
+            }
+            if (!$(".portfolio").hasClass("hidden")) {
+                $(".portfolio").addClass("hidden");
+            }
+            $(".contact").removeClass("hidden");
+        } else if (!$(".contact").hasClass("hidden") && window.innerWidth < 920) {
             moveMainDown();
-            $(".contact").fadeOut();
-        } else if ($(".contact").attr("style") === "display: block;" && window.innerWidth >= 920) {
+            $(".contact").addClass("hidden");
+        } else if (!$(".contact").hasClass("hidden") && window.innerWidth > 920) {
             resetMainText()
-            $(".contact").fadeOut();
+            $(".contact").addClass("hidden");
         } 
-
     });
 
+    // all dark-mode styling
+
     $(document.body).on("click", ".dark-mode-div", function() {
+
+        //changing font 
+
+        $("body").toggleClass("dark-mode-font");
 
         //changing font-awesome icon
         
@@ -163,8 +220,20 @@ $(document).ready(function() {
         $(".section-title").toggleClass("dark-mode-text");
 
     });
-        
 
+    // styling to account for javascript dynamic content
+
+    $(window).resize(function() {
+        if (window.innerWidth >= 320 && window.innerWidth < 920 && (!$(".about-me").hasClass("hidden") || !$(".portfolio").hasClass("hidden") || !$(".contact").hasClass("hidden"))) {
+            $(".header").html("<p>" + "Nav" + "</p>");
+            $(".main-div").css("margin-top", "0px");
+            $(".main-div").css({top: 0});
+        } else if (window.innerWidth >= 920 && (!$(".about-me").hasClass("hidden") || !$(".portfolio").hasClass("hidden") || !$(".contact").hasClass("hidden"))) {
+            $(".header").html("<p>" + "Nav" + "</p>");
+            $(".main-div").css("margin-top", "-95px");
+            $(".main-div").css({top: "50%"});
+        }
+    });
 });
 
 

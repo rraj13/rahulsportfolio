@@ -400,7 +400,8 @@ body {
     
     .about-me {
         left: 45%;
-        top: 5%;
+        top: 50%;
+        margin-top: -230.5px;
         width: 500px;
     }
 

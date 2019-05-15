@@ -1,7 +1,5 @@
 $(document).ready(function() { 
 
-    let clicked = false;
-
     function resetMainText() {
         $(".header").html("<p id='test'>" + "Hi. I'm Rahul." + "</p>");
         $(".header").append("<p>" + "I build " + "<span>" + "web apps." + "</span>" + "</p>");
@@ -20,6 +18,12 @@ $(document).ready(function() {
         $(".main-div").animate({top: "50%"});
 
     }
+
+    if (window.innerWidth >= 320 && window.innerWidth < 920) {
+        moveMainUp();
+    }
+    
+    let clicked = false;
 
     // dynamic styling for "about-me" section
 

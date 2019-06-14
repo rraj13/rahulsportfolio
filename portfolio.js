@@ -19,8 +19,8 @@ $(document).ready(function() {
 
     }
 
-    if (window.innerWidth >= 320 && window.innerWidth < 920) {
-        moveMainUp();
+    if (window.innerWidth > 920) {
+        $(".about-me").removeClass("hidden");
     }
     
     let clicked = false;
